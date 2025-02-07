@@ -1,4 +1,4 @@
-package dev.java10x.CadastroDeNinjas.Missoes.Model;
+package dev.java10x.CadastroDeNinjas.Missoes;
 
 public enum RankMissao {
     D,
