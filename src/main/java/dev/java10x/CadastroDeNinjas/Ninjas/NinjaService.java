@@ -40,8 +40,13 @@ public class NinjaService {
         ninjaRepository.deleteById(id);
     }
 
-    public NinjaModel alterarPorId(NinjaModel ninja) {
-        return ninjaRepository.save(ninja);
+    public NinjaModel alterarPorId(Long id, NinjaModel ninja) {
+        if (ninjaRepository.existsById(id)) {
+            ninja.setId(id);
+            return ninjaRepository.save(ninja);
+        } else {
+            return null;
+        }
     }
 
 }
