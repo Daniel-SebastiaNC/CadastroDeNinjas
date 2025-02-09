@@ -30,5 +30,9 @@ public class NinjaService {
 
     }
 
+    public NinjaModel cirarNinja(NinjaModel ninjaModel) {
+        return ninjaRepository.save(ninjaModel);
+    }
+
 
 }

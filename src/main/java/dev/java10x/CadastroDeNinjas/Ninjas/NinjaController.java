@@ -21,8 +21,8 @@ public class NinjaController {
 
     //Adiconar Ninja
     @PostMapping("/adicionar")
-    public String cirarNinja() {
-        return "Ninja adicionado";
+    public NinjaModel cirarNinja(@RequestBody NinjaModel ninja) {
+        return ninjaService.cirarNinja(ninja);
     }
 
     //Mostrar todos os Ninjas
