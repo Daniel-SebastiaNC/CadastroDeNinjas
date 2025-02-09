@@ -30,4 +30,7 @@ public class MissaoService {
         }
     }
 
+    public void deletaPorId(Long id){
+        missaoRepository.deleteById(id);
+    }
 }
