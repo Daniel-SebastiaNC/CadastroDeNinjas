@@ -3,7 +3,7 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninja")
 public class NinjaController {
 
     @GetMapping("/hello")
@@ -36,7 +36,7 @@ public class NinjaController {
     }
 
     //Deletar Ninja
-    @DeleteMapping("/delete")
+    @DeleteMapping("/deletar")
     public String deletarPorId() {
         return "Deletar os Ninja por id";
     }
