@@ -5,10 +5,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/missao")
 public class MissaoController {
+    private MissaoService missaoService;
+
+    public MissaoController(MissaoService missaoService) {
+        this.missaoService = missaoService;
+    }
 
     @PostMapping("/adiconar")
-    public String criarMissao(){
-        return "Missao Criada";
+    public MissaoModel criarMissao(@RequestBody MissaoModel missao){
+        return missaoService.criarMissao(missao);
     }
 
     @GetMapping("/todos")
