@@ -16,17 +16,17 @@ public class MissaoController {
         return "Todas Missoes";
     }
 
-    @GetMapping("/mostrarporid")
+    @GetMapping("/mostrar/{id}")
     public String mostrarPorId(){
         return "Missao por id";
     }
 
-    @PutMapping("/alterar")
+    @PutMapping("/alterar/{id}")
     public String alterarPorId(){
         return "Altera por id";
     }
 
-    @DeleteMapping
+    @DeleteMapping("/deletar/{id}")
     public String deletaPorId(){
         return "Deleta por id";
     }

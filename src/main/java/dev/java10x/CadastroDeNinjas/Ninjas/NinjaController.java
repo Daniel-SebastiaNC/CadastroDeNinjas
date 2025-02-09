@@ -24,19 +24,19 @@ public class NinjaController {
     }
 
     //Mostrar Ninja por Id
-    @GetMapping("/todosporid")
+    @GetMapping("/todos/{id}")
     public String mostrarNinjasPorId() {
         return "Todos os Ninja por id";
     }
 
     //Alterar dados do Ninja
-    @PutMapping("/alterar")
+    @PutMapping("/alterar/{id}")
     public String alterarPorId() {
         return "Alterar os Ninja por id";
     }
 
     //Deletar Ninja
-    @DeleteMapping("/deletar")
+    @DeleteMapping("/deletar/{id}")
     public String deletarPorId() {
         return "Deletar os Ninja por id";
     }
