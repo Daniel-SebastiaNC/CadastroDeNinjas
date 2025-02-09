@@ -24,8 +24,8 @@ public class MissaoController {
     }
 
     @GetMapping("/mostrar/{id}")
-    public String mostrarPorId(){
-        return "Missao por id";
+    public MissaoModel mostrarPorId(@PathVariable Long id){
+        return missaoService.mostrarPorId(id);
     }
 
     @PutMapping("/alterar/{id}")

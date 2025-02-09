@@ -3,6 +3,7 @@ package dev.java10x.CadastroDeNinjas.Missoes;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MissaoService {
@@ -19,4 +20,14 @@ public class MissaoService {
     public List<MissaoModel> mostrarTodos(){
         return missaoRepository.findAll();
     }
+
+    public MissaoModel mostrarPorId( Long id){
+        Optional<MissaoModel> missao = missaoRepository.findById(id);
+        if (missao.isEmpty()) {
+            return null;
+        } else {
+            return missao.get();
+        }
+    }
+
 }
