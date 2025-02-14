@@ -1,5 +1,8 @@
-package dev.java10x.CadastroDeNinjas.Missoes;
+package dev.java10x.CadastroDeNinjas.Missao;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MissaoMapper {
     public MissaoModel map(MissaoDTO missaoDTO){
         MissaoModel missaoModel = new MissaoModel(missaoDTO.getId(), missaoDTO.getNome(), missaoDTO.getDificuldade(), missaoDTO.getNinjas());
