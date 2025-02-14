@@ -22,7 +22,7 @@ public class NinjaService {
         List<NinjaModel> ninjas = ninjaRepository.findAll();
 
         /*
-        List<NinjaDTO> ninjaDTO = new ArrayList<>();
+        List<MissaoDTO> ninjaDTO = new ArrayList<>();
         for (NinjaModel ninja : ninjaModel) {
             ninjaDTO.add(ninjaMapper.map(ninja));
         }*/
